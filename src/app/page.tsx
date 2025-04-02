@@ -42,7 +42,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   className="bg-indigo-600 hover:bg-indigo-700 text-white cursor-pointer transition-colors"
-                  onClick={() => window.open("https://shin-quick.vercel.app", "_blank")}
+                  onClick={() => window.open("https://app.shinquick.nikkou.dev", "_blank")}
                 >
                   今すぐアプリを開く
                 </Button>
@@ -332,7 +332,7 @@ export default function Home() {
             <Button
               size="lg"
               className="bg-indigo-600 hover:bg-indigo-700 text-white cursor-pointer transition-colors"
-              onClick={() => window.open("https://shin-quick.vercel.app", "_blank")}
+              onClick={() => window.open("https://app.shinquick.nikkou.dev", "_blank")}
             >
               今すぐアプリを開く
             </Button>
