@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { AlertTriangle, Globe, Palette, ChevronRight, Activity, Zap, PanelRightDashed, Omega } from "lucide-react"
+import { AlertTriangle, Globe, Palette, ChevronRight, Activity, Zap, PanelRightDashed, Omega, Cable } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Image from "next/image"
 import { SiGithub } from "react-icons/si"
@@ -148,11 +148,26 @@ export default function Home() {
                 <div className="flex items-center justify-center w-14 h-14 mb-4 rounded-full bg-indigo-100 dark:bg-indigo-900">
                   <Zap className="w-7 h-7 text-indigo-600 dark:text-white" />
                 </div>
-                <CardTitle className="text-xl">Project DM-D.S.Sへの対応</CardTitle>
+                <CardTitle className="text-xl">複数情報ソースへの対応</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 dark:text-slate-300 pb-6">
-                  緊急地震速報（予報）をProject DM-D.S.Sと契約することで、リアルタイムで情報を受信可能です。<span className="text-xs">※3</span>
+                  Project DM-D.S.Sで緊急地震（予報）を契約またはAXISに会員登録することで、リアルタイムで情報を受信可能です。
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg transition-all duration-200 hover:shadow-xl hover:translate-y-[-5px] bg-white dark:bg-slate-700 overflow-hidden m-0 p-0">
+              <div className="h-2 bg-indigo-500"></div>
+              <CardHeader>
+                <div className="flex items-center justify-center w-14 h-14 mb-4 rounded-full bg-indigo-100 dark:bg-indigo-900">
+                  <Cable className="w-7 h-7 text-indigo-600 dark:text-white" />
+                </div>
+                <CardTitle className="text-xl">同時接続</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600 dark:text-slate-300 pb-6">
+                  Project DM-D.S.SとAXISの両方に同時接続ができ、どちらか一方のサービスに障害が発生しても、もう一方から継続して情報を受信できるため、安定して速報を確認できます。
                 </p>
               </CardContent>
             </Card>
@@ -307,7 +322,7 @@ export default function Home() {
                   <AccordionTrigger className="text-lg font-medium text-slate-800 dark:text-slate-200 px-6 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-slate-600 dark:text-slate-300 px-6">
+                  <AccordionContent className="text-slate-600 dark:text-slate-300 px-6 pt-3">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -349,10 +364,7 @@ export default function Home() {
 
             <p className="text-xs text-slate-400 dark:text-slate-500 text-left">
               ※2: PLUM法、レベル法、IPF法（1点）は、デフォルトでは表示しません。利用者が性質を理解したうえで設定を変更し、利用することができます。
-            </p>
-
-            <p className="text-xs text-slate-400 dark:text-slate-500 text-left">
-              ※3: 現状では情報源をProject DM-D.S.Sに頼っているため無料では緊急地震速報を受信できません。使用する場合は緊急地震（予報）を契約していただく形になります
+              また、PLUM法・レベル法・IPF法（1点）などの1点観測緊急地震速報を利用するにはProject DM-D.S.Sの緊急地震（予報）契約が必要です。
             </p>
           </div>
         </div>
